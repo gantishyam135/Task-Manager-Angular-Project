@@ -24,9 +24,7 @@ isAddingTask= false;
 
 constructor(private taskService : TaskService){}
 
-onCompleteTask(id : string){
-    this.taskService.removeTask(this.selectedUser.id);
-}
+
 
 onSelectNewTask(){
     this.isAddingTask = true;
@@ -45,4 +43,6 @@ onAddTask(taskData : NewTaskData){
 get selectedUserTasks(){
     return this.taskService.getUserTasks(this.selectedUser.id);
   }
+
+
 }
